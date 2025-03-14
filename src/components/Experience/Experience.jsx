@@ -8,6 +8,8 @@ import {
     SiCss3,
     SiHtml5,
     SiMui,
+    SiJavascript,
+    SiBootstrap
   } from 'react-icons/si';
 
 const Experience = () => {
@@ -18,6 +20,36 @@ const Experience = () => {
     });
 
     const data = [
+        {
+            title: 'WorkIn',
+            job: 'Front End developer',
+            type: 'hibryd',
+            description: [
+                'I developed solutions for a business software built with ReactJS',
+                'It was my first job and the one where I learned the most',
+                'The job was on-site and part-time, from Monday to Friday',
+            ],
+            initialDate: 'August 2021',
+            endDate: 'September 2023',
+            skillsIcon: [
+                {
+                    icon: <SiReact className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'React'
+                },
+                {
+                    icon: <SiJavascript className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'JavaScript'
+                },
+                {
+                    icon: <SiBootstrap className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Bootstrap'
+                },
+                {
+                    icon: <SiMui className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Material UI'
+                }
+            ]
+        },
         {
             title: 'Facill App',
             job: 'Front End developer',
