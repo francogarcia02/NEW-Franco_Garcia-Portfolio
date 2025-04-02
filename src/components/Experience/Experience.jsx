@@ -9,7 +9,12 @@ import {
     SiHtml5,
     SiMui,
     SiJavascript,
-    SiBootstrap
+    SiBootstrap,
+    SiNodedotjs,
+    SiExpress, 
+    SiMercadopago,
+    SiGmail,
+    SiVercel
   } from 'react-icons/si';
 
 const Experience = () => {
@@ -29,7 +34,7 @@ const Experience = () => {
                 'It was my first job and the one where I learned the most',
                 'The job was on-site and part-time, from Monday to Friday',
             ],
-            initialDate: 'August 2021',
+            initialDate: 'August 2022',
             endDate: 'September 2023',
             skillsIcon: [
                 {
@@ -152,6 +157,71 @@ const Experience = () => {
                 {
                     icon: <SiCss3 className="text-2xl hover:text-[#FF6347]"/>,
                     title: 'CSS3'
+                }
+            ]
+        },
+        {
+            title: 'Trainner Page',
+            job: 'FullStack developer',
+            type: 'remote',
+            full: true,
+            description: [
+                'I was in charge of the planning, development, and implementation of a website for selling personalized muscle-building plans for a famous trainer.',
+                'The Frontend was developed in NextJS with TypeScript and Tailwind as the styling framework.',
+                'The Backend was developed with NodeJS using an Express.js server, integrating APIs for the payment gateway and email delivery.'
+            ],
+            initialDate: 'February 2025',
+            endDate: 'March 2025',
+            skillsFrontIcon: [
+                {
+                    icon: <SiNextdotjs className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Next JS'
+                },
+                {
+                    icon: <SiTypescript className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'TypeScript'
+                },
+                {
+                    icon: <SiMui className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Material UI'
+                },
+                {
+                    icon: <SiTailwindcss className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Tailwind CSS'
+                },
+                {
+                    icon: <SiHtml5 className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'HTML5'
+                },
+                {
+                    icon: <SiCss3 className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'CSS3'
+                },
+                {
+                    icon: <SiVercel className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Vercel'
+                }
+            ],
+            skillsBackIcon: [
+                {
+                    icon: <SiNodedotjs className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'NodeJS'
+                },
+                {
+                    icon: <SiExpress className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Express'
+                },
+                {
+                    icon: <SiJavascript className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'JavaScript'
+                },
+                {
+                    icon: <SiMercadopago className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Mercadopago'
+                },
+                {
+                    icon: <SiGmail className="text-2xl hover:text-[#FF6347]"/>,
+                    title: 'Gmail'
                 }
             ]
         },

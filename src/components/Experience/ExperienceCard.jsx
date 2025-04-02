@@ -1,5 +1,12 @@
+import { useState } from "react"
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
 const ExperienceCard = ({item, index}) => {
-    const {title, description, job, skillsIcon, initialDate, endDate} = item
+    const [side, setSide] = useState(true)
+    
+    const {title, description, job, skillsIcon, initialDate, endDate, full, skillsFrontIcon, skillsBackIcon} = item
+
 
     return(
         <div className="text-white w-full flex flex-col gap-2">
@@ -17,6 +24,51 @@ const ExperienceCard = ({item, index}) => {
                     <p>{item}</p>
                 ))}
             </div>
+            {full ?
+            <div>
+                <div className='flex justify-start items-center gap-4 mb-3'>
+                    <button onClick={()=>setSide(true)} className={`text-xs font-bold ${side ? 'text-[#FF6347]':''}`}>FRONT</button>
+                    <div className='flex'>
+                        <KeyboardArrowLeftIcon fontSize='small' className={`${side ? 'text-[#FF6347]' : ''}`}/>
+                        <KeyboardArrowRightIcon fontSize='small' className={`${side ? '' : 'text-[#FF6347]'}`}/>
+                    </div>
+                    <button onClick={()=>setSide(false)} className={`text-xs font-bold ${side ? '':'text-[#FF6347]'}`}>BACK</button>
+                </div>
+                {side ? 
+                <div className="flex items-center gap-4">
+                    {skillsFrontIcon.map((item, index) => (
+                        <div
+                        key={index}
+                        className="flex items-center group transition-all duration-300"
+                        >
+                        {item.icon}
+                        <p
+                            className="ml-2 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:ml-4 transition-all duration-300 overflow-hidden whitespace-nowrap text-gray-500"
+                        >
+                            {item.title}
+                        </p>
+                        </div>
+                    ))}
+                </div>
+                :
+                <div className="flex items-center gap-4">
+                    {skillsBackIcon.map((item, index) => (
+                        <div
+                        key={index}
+                        className="flex items-center group transition-all duration-300"
+                        >
+                        {item.icon}
+                        <p
+                            className="ml-2 opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs group-hover:ml-4 transition-all duration-300 overflow-hidden whitespace-nowrap text-gray-500"
+                        >
+                            {item.title}
+                        </p>
+                        </div>
+                    ))}
+                </div>
+                }
+            </div>
+            :
             <div className="flex flex-wrap items-center gap-4 p-2">
                 {skillsIcon.map((item, index) => (
                     <div
@@ -35,6 +87,8 @@ const ExperienceCard = ({item, index}) => {
                 ))}
                 
             </div>
+            }
+            
         </div>
     )
 }
